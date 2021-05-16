@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a71707a89a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Library</title>
+</head>
+<body class="container">
+    <div id="heroSection">
+        <h3 class="subtitle">Welcome to your:</h3>
+        <h1 class="headingText">Library</h1>
+        <button class="btn" id="popupBtn" onclick="displayModal()">Add Book</button>
+        <div id="popupForm">
+            <form action="#" id="formContainer">
+                <input 
+                    type="text" 
+                    placeholder="Book Name" 
+                    id="bookName"><br>
+                <input 
+                    type="text" 
+                    placeholder="Book Author" 
+                    id="bookAuthor"><br>
+                <input 
+                    type="number" 
+                    placeholder="Number of Pages" 
+                    id="numberOfPages"><br>
+                <input type="checkbox" name="Read" id="read" value="Read">
+                <label for="Read">Read</label>
+                <div>
+                    <button type="submit" class="btn" id="closeModalBtn" onclick="closeModal(event)">Cancel</button>
+                    <button type="submit" class="btn" id="addBook" onclick="clickHandler(event)">Done</button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+
+    <div id="cardContainer">
+
+    </div>
+</body>
+<script src="./Scripts/index.js"></script>
+<script src="./Scripts/modal.js"></script>
+</html>

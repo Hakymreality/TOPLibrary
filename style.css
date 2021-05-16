@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Inconsolata&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --accent-color: #ffba08;
+    --main-color: #03071e;
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+}
+#heroSection{
+    background-color: var(--main-color);
+    width: 40vw;
+    padding:1em;
+}
+#cardContainer{
+    background-image: url(./Assets/background.jpg);
+    width: 60vw;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+#popupForm{
+    width: 500px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 0 10px black;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    padding: 10px;
+    text-align: center;
+    display: none;
+}
+.subtitle{
+    margin-top:5em;
+    font-family: 'Inconsolata', monospace;
+    font-size:2rem;
+    color: var(--accent-color);
+}
+.headingText{
+    font-family: 'DM Sans', sans-serif;
+    font-size:5rem;
+    color: white;
+}
+.btn{
+    padding:0.5rem 4rem;
+    border:none;
+    background-color: transparent;
+    color: var(--accent-color);
+    border:1px solid var(--accent-color);
+    font-family:'Inconsolata', monospace;
+}
+
+.btn:hover, .btn:focus{
+    background-color: var(--accent-color);
+    color: var(--main-color);
+}
+
+#closeModalBtn{
+    border:1px solid red;
+    color: black;
+}
+#closeModalBtn:hover, #closeModalBtn:active{
+    background-color: red;
+    color: white;
+}
+
+input{
+    padding: 0.8em;
+    margin: 0.5em;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    margin: 2rem;
+    width:10rem;
+    height:10rem;
+    padding: 0.5rem;
+    box-shadow: 5px 10px rgba(0,0,0,0.1);
+    border-radius: 5%;
+    font-family: 'Inconsolata', monospace;
+    font-size: 1.2rem;
+}
+ul{
+    list-style-type: none;
+}
