@@ -32,14 +32,33 @@ function addToLibrary() {
 function createCard(book) {
 	let div = document.createElement('div');
 	div.classList.add('card');
-		let ul = document.createElement('ul');
+
+	let btnDiv = document.createElement('div');
+	btnDiv.classList.add('btnDiv');
+
+	let delIcon = document.createElement('i');
+	delIcon.classList.add('far', 'fa-trash-alt', 'icons');
+	delIcon.setAttribute('id', 'deleteIcon');
+
+	let finishIcon = document.createElement('i');
+	finishIcon.classList.add('fas', 'fa-check-circle', 'icons');
+	finishIcon.setAttribute('id', 'finishIcon');
+
+	btnDiv.appendChild(finishIcon);
+	btnDiv.appendChild(delIcon);
+
+	let ul = document.createElement('ul');
 	for (prop in book) {
+		if (book[prop] === true || false) {
+			continue;
+		}
 		let li = document.createElement('li');
 		li.innerText = book[prop];
 		ul.appendChild(li);
 	}
 	div.appendChild(ul);
-	cardContainer.appendChild(div)
+	div.appendChild(btnDiv);
+	cardContainer.appendChild(div);
 }
 function clickHandler(ev) {
 	ev.preventDefault();

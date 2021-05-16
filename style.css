@@ -82,6 +82,7 @@ input{
 
 .card{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     background-color: white;
@@ -94,6 +95,18 @@ input{
     font-family: 'Inconsolata', monospace;
     font-size: 1.2rem;
 }
+
 ul{
     list-style-type: none;
+}
+#deleteIcon{
+    margin-left:4em;
+    color: red;
+}
+#deleteIcon:hover, #finishIcon:hover{
+    transform: scale(1.2);
+}
+
+#finishIcon{
+    color: green;
 }
